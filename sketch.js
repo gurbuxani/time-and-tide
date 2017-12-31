@@ -4,6 +4,7 @@ function setup() {
  }
 
  function draw() {
+   background(0, [0]);
    translate(400, 400);
    rotate(-90);
 

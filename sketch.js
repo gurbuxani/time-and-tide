@@ -3,8 +3,7 @@ function setup() {
    angleMode(DEGREES);
  }
 
- function draw() {
-   background(0, [0]);
+ function draw() {   
    translate(400, 400);
    rotate(-90);
 

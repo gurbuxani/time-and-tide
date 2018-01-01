@@ -1,9 +1,11 @@
 function setup() {
-   createCanvas(800, 800);
-   angleMode(DEGREES);
+ createCanvas(800, 800);
+ angleMode(DEGREES);
  }
 
- function draw() {   
+ function draw() {
+   clear();
+   background('rgba(0,0,0,0)');
    translate(400, 400);
    rotate(-90);
 
@@ -30,7 +32,7 @@ function setup() {
     let hourAngle = map(hr % 12, 0, 12, 0, 360);
     arc(0, 0, 150, 150, 0, hourAngle);
 
-// cener point
+// center point
     strokeWeight(2);
     stroke(255);
     point(0, 0);
@@ -39,7 +41,13 @@ function setup() {
     rotate(90);
     fill(255);
     noStroke();
-    text(hr + ':' + mn + ':' + sc, 5, 400);
-
-
+    if (hr > 9 && mn > 9 && sc > 9) {
+      text(hr + ' : ' + mn + ' : ' + sc, 5, 400);
+    } else if (hr < 10) {
+      text('0' + hr + ' : ' + mn + ' : ' + sc, 5, 400);
+    } else if (mn < 10) {
+      text(hr + ' : ' + '0' + mn + ' : ' + sc, 5, 400);
+    } else if (sc < 10) {
+      text(hr + ' : ' + mn + ' : ' + '0' + sc, 5, 400);
+    }
 }

@@ -1,7 +1,7 @@
 function setup() {
  createCanvas(800, 800);
  angleMode(DEGREES);
- }
+}
 
  function draw() {
    clear();
@@ -48,7 +48,7 @@ function setup() {
 
 // convert time to two digits
 function doubleDigits(n) {
-  if (n < 10){
+  if (n < 10) {
   return '0' + n;
   } else return n;
 }
